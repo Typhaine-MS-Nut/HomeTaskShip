@@ -1,0 +1,10 @@
+name: ships_app
+title:
+username:
+account: typh
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3594921
+bundleId: 4192866
+url: https://typh.shinyapps.io/ships_app/
+when: 1612725666.43322
