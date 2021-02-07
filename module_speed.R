@@ -43,7 +43,7 @@ dynamicInfo <- function(input, output, session, the_data,value){
         MAX_DIST<-dt%>%dplyr::arrange(dplyr::desc(DISTANCE,DATETIME))
         MAX_DIST<-MAX_DIST$DISTANCE[1]
         output$value<- renderText({
-          paste(round(MAX_DIST,0),"Km")
+          paste(round((MAX_DIST)*1000,0),"m")
         })
       }else{
         if(value=="last_dep"){
@@ -54,7 +54,7 @@ dynamicInfo <- function(input, output, session, the_data,value){
         }else{
           TOT_DISTANCE<-sum(dt$DISTANCE,na.rm = T)
           output$value<- renderText({
-            paste(round(TOT_DISTANCE,0),"Km")
+            paste(round((TOT_DISTANCE)*1000,0),"m")
           })
         }
       }
